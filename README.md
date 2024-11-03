@@ -62,5 +62,7 @@ Configura o arquivo `.pre-commit-config.yaml` e rode
 ```
 poetry run pre-commit install
 git add .pre-commit-config.yaml
+git commit -m "subir pre-commit"
+git push
 ```
 Agora toda vez que comitar um código, ele passará por uma série de testes.
