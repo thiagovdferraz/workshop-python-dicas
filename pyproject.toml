@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "workshop-python-resumo"
+version = "0.1.0"
+description = ""
+authors = ["Thiago Ferraz <thiagovdferraz@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+taskipy = "^1.14.0"
+pre-commit = "^4.0.1"
+black = "^24.10.0"
+isort = "^5.13.2"
+flake8 = "^7.1.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.taskipy.tasks]
+format = """
+isort read_csv_100M_boas_praticas.py
+black read_csv_100M_boas_praticas.py
+flake8 read_csv_100M_boas_praticas.py
+"""
